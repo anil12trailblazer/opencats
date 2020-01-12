@@ -1,0 +1,17 @@
+{
+  "name": "opcts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss CSS/style.css -w"
+  },
+  "author": "anil",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "@material/data-table": "^4.0.0"
+  }
+}
