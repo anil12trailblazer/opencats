@@ -40,31 +40,26 @@ html, body {
       position: relative;
       display: inline-block;
       font-family: 'Gelasio', serif; }
-  html .top-navbar-icon a, body .top-navbar-icon a {
-    color: #000;
-    padding: 0.5rem;
-    font-size: 24px;
-    position: relative;
-    display: inline-block; }
-    html .top-navbar-icon a input, body .top-navbar-icon a input {
-      border: 0.4px solid #e6e6e6;
-      width: 150px;
-      height: 35px;
-      border-radius: 5px;
-      overflow: hidden;
-      font-size: 16px;
-      color: #e6e6e6;
-      background-color: #FFF;
-      padding: 0.5rem; }
-      html .top-navbar-icon a input i, body .top-navbar-icon a input i {
-        float: right; }
-        html .top-navbar-icon a input i:hover, body .top-navbar-icon a input i:hover {
-          color: #46B027; }
+    html .navbar .dashboard-menu a:hover, body .navbar .dashboard-menu a:hover {
+      color: #46B027; }
+    html .navbar .dashboard-menu a::after, body .navbar .dashboard-menu a::after {
+      position: absolute;
+      transition: all .7s;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '';
+      color: transparent;
+      background: #000;
+      height: 1px; }
+    html .navbar .dashboard-menu a:hover:after, body .navbar .dashboard-menu a:hover:after {
+      width: 100%; }
   html .container-fluid, body .container-fluid {
-    height: 100%;
-    width: 100%; }
+    height: 100%; }
     html .container-fluid .fixed-nav, body .container-fluid .fixed-nav {
-      height: 100%; }
+      height: auto; }
       html .container-fluid .fixed-nav .fixed-nav-inner, body .container-fluid .fixed-nav .fixed-nav-inner {
         display: inline-flex;
         flex-direction: column;
@@ -75,7 +70,7 @@ html, body {
         background-color: #FFF;
         flex: 1;
         z-index: 99;
-        box-shadow: 7px 0 7px -2.5px #e6e6e6; }
+        box-shadow: 5px 0 5px -1px #e6e6e6; }
         html .container-fluid .fixed-nav .fixed-nav-inner ul, body .container-fluid .fixed-nav .fixed-nav-inner ul {
           list-style-type: none;
           padding: 0; }
@@ -130,87 +125,42 @@ html, body {
           font-size: 12px; }
 
 /* dropdown-menu-space */
-section .dropdown-menu-space {
+.dropdown-menu-space {
   width: 100%;
-  height: 170px;
+  height: 50px;
+  background-color: #FFF;
   margin-top: 70px;
-  box-shadow: 0px 5px 5px -1px #e6e6e6;
-  padding-left: 100px;
-  padding-top: 5px; }
-
-.info-box.info-box-sm {
-  min-height: 100px;
-  margin-top: 25px;
-  font-size: 15px;
-  display: inline-flex;
-  box-shadow: 0px 5px 15px #d6d0d0; }
-
-.info-box.info-box-sm .info-box-icon {
-  height: 100px;
-  font-size: 50px;
-  line-height: 50px; }
-
-.info-box .info-box-sm .info-box-content {
-  height: 100px; }
-
-.info-box .info-box-content .info-box-text {
-  padding: 20px;
-  font-size: 18px !important;
-  text-transform: uppercase;
-  font-weight: 600; }
-
-.info-box .info-box-content .info-box-number {
-  font-size: 16px !important;
-  display: flex;
-  margin-left: 30px; }
-
-.info-box.info-box-sm.dropdown {
-  float: left;
-  height: 100px; }
-
-.info-box.info-box-sm.dropdown .info-box-icon {
-  background: #46B027;
-  display: inline-flex;
-  padding: 20px;
-  color: #FFF; }
-
-.info-box.info-box-sm.dropdown .info-box-content {
-  width: 215px;
-  background: #FFF;
-  float: left;
-  padding-top: 30px;
-  color: #000; }
+  border-bottom: 0.5px solid #000;
+  box-shadow: 0px 5px 5px -1px #e6e6e6; }
 
 /*----------------------------------------*/
 section .fixed-menu {
+  padding-top: 30px;
+  height: 60px;
   width: 100%;
+  border-bottom: 0.5px solid #000;
   background-color: #FFF;
-  background: cover;
-  box-shadow: 0 5px 5px -1px #e6e6e6;
-  margin-top: 20px; }
+  background: cover; }
   section .fixed-menu ul {
-    padding-left: 100px; }
-    section .fixed-menu ul li {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-family: 'Gelasio', serif;
-      color: #363435;
-      font-weight: 200; }
+    margin-left: 50px; }
+
+.fixed-menu ul li {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Gelasio', serif;
+  color: #000;
+  font-weight: 600; }
 
 /*-------------first table upadates style---------------*/
-.firstpage-firsttable-updates {
-  padding-left: 85px;
-  padding-right: 15px;
-  text-decoration: none; }
-  .firstpage-firsttable-updates h4 {
-    text-decoration: none;
-    font-family: 'Gelasio', serif;
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-    color: #000;
-    text-transform: uppercase; }
+.firstpage-firsttable-updates h4 {
+  text-decoration: none;
+  font-family: 'Gelasio', serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase; }
 
 .firstpage-firsttable-updates h4 span {
   color: #46B027; }
@@ -222,14 +172,11 @@ section .fixed-menu {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
-  border-radius: 5px;
-  overflow: hidden;
+  border-radius: 3px;
   background-color: #FFF;
   color: #000;
   font-family: 'Gelasio', serif;
-  box-shadow: 0px 5px 15px #d6d0d0; }
-  .firstpage-firsttable-updates table td, .firstpage-firsttable-updates table th {
-    border: none !important; }
+  box-shadow: 0px 0px 10px #d6d0d0; }
 
 /*-------------firstpage-secondttable-updates--------------*/
 .firstpage-secondtable-updates h4 {
@@ -248,20 +195,13 @@ section .fixed-menu {
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  overflow: hidden;
   text-transform: uppercase;
   font-size: 12px;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #FFF;
   color: #000;
   font-family: 'Gelasio', serif;
-  box-shadow: 0px 5px 15px #d6d0d0; }
-  .firstpage-secondtable-updates table td, .firstpage-secondtable-updates table th {
-    border: none !important; }
-
-.firstpage-secondtable-updates {
-  padding-left: 85px;
-  padding-right: 15px; }
+  box-shadow: 0px 0px 10px #d6d0d0; }
 
 /*---------------firstpage-thirdtable-updates--------------*/
 .firstpage-thirdtable-updates h4 {
@@ -281,16 +221,26 @@ section .fixed-menu {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  overflow: hidden;
   font-size: 12px;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #FFF;
   color: #000;
   font-family: 'Gelasio', serif;
-  box-shadow: 0px 5px 15px #d6d0d0; }
-  .firstpage-thirdtable-updates table td, .firstpage-thirdtable-updates table th {
-    border: none !important; }
+  box-shadow: 0px 0px 10px #d6d0d0; }
 
-.firstpage-thirdtable-updates {
-  padding-left: 85px;
-  padding-right: 15px; }
+hr.style {
+  height: 15px;
+  border-style: solid;
+  border-color: #46B027;
+  border-width: 0.5px 0 0 0;
+  border-radius: 10px; }
+
+hr.style:before {
+  display: block;
+  content: "";
+  height: 15px;
+  margin-top: -15.5px;
+  border-style: solid;
+  border-color: #363435;
+  border-width: 0 0 .5px 0;
+  border-radius: 10px; }
