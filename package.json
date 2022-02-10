@@ -9,7 +9,7 @@
   "author": "anil",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "@material/data-table": "^4.0.0"
